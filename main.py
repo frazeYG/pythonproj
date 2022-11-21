@@ -39,3 +39,4 @@ def quick_sort(arr,cmp):
             items_lower.append(item)
     return quick_sort(items_lower,cmp) + [pivot] + quick_sort(items_greater,cmp)
     pass
+print(tj)
