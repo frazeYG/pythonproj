@@ -20,6 +20,22 @@ def multi_sort(arr, cmp, method="None"):
 def merge_sort(arr,cmp):
     pass
 
+
+
 # must be in-place sort
 def quick_sort(arr,cmp):
+    length = len(arr)
+    if length <= 1:
+        return arr
+    else:
+        pivot = arr.pop()
+    items_greater = []
+    items_lower = []
+
+    for item in arr:
+        if item > pivot:
+            items_greater.append(item)
+        else:
+            items_lower.append(item)
+    return quick_sort(items_lower,cmp) + [pivot] + quick_sort(items_greater,cmp)
     pass
